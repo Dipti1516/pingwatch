@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: pingwatch
+    runtime: java
+    buildCommand: "./mvnw package -DskipTests"
+    startCommand: "java -jar target/pingwatch-0.0.1-SNAPSHOT.jar"
+    envVars:
+      - key: PORT
+        value: 8080
